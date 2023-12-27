@@ -1,7 +1,33 @@
-# Welcome to streamlit
+# shop
+shop is an open source PropTech Real Estate Platform.
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+## Motivation
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+This project has been created to address a gap in the real estate online ecosystem: the lack of an open source project for real estate websites.
+
+WordPress has become the dominant tool for creating real estate websites, but often requires the user to pay for respective themes. 
+
+Project shop seeks to address this, and provides the user with a fullstack ready-to-use open source codebase.
+
+## Stack
+
+Frontend and Backend:
+- Python (3.8)
+- Django (3.1)
+- PostgreSQL (12)
+- Bootstrap (4)
+
+If you are new to the Python Django framework, check: https://docs.djangoproject.com/en/3.1/
+
+## Features
+
+- Fully open source
+- Admin panel
+- Powerful search functionality
+- Modern UI/UX
+- Mobile friendly responsive layout
+
+## Author
+
+Stefan Luiken, the Netherlands

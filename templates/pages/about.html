@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | О нас{% endblock %}
+
+{% block content %}
+
+  <!-- Хлебные крошки -->
+  <section id="bc" class="mt-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">
+              <i class="fas fa-home"></i> Главная</a>
+          </li>
+          <li class="breadcrumb-item active"> О нас</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section id="about" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Мы ищем идеальный дом</h2>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
+          <img src="{% static 'img/about.jpg' %}" alt="">
+          <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis esse officia repudiandae ad saepe ex, amet
+            neque quod accusamus rem quia magnam magni dolorum facilis ullam minima perferendis? Exercitationem at quaerat
+            commodi id libero eveniet harum perferendis laborum molestias quia.</p>
+        </div>
+        <div class="col-md-4">
+
+          {% if mvp_builders %}
+            {% for builder in mvp_builders %}
+              <div class="card">
+            <img class="card-img-top" src="{{builder.photo.url}}" alt="Строитель месяца">
+            <div class="card-body">
+              <h5 class="card-title">Строитель месяца</h5>
+              <h6 class="text-secondary">{{builder.name}}</h6>
+              <p class="card-text">{{builder.description}}
+              </p>
+            </div>
+          </div>
+            {% endfor %}
+          {% endif %}
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
